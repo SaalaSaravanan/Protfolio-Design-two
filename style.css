@@ -7,22 +7,21 @@
   --theme: #ff4221;
 }
 
-
-#dark{
+#dark {
   --background-color: #141414;
   --text-color: #f4f6ff;
   --theme: #f4f6ff;
   --theme-text: #ff4221;
 }
 
-body#dark .theme>.sun{
+body#dark .theme > .sun {
   display: none;
 }
-body#dark .theme>.moon{
+body#dark .theme > .moon {
   display: block;
 }
 
-body .theme>.moon{
+body .theme > .moon {
   display: none;
 }
 
@@ -75,7 +74,7 @@ body {
   opacity: 0;
   animation: slideFromBottom 1s ease forwards;
 }
-.navbar .theme>i {
+.navbar .theme > i {
   color: var(--theme-text);
 }
 
@@ -164,6 +163,7 @@ body {
 /* Home */
 .home {
   width: 100%;
+  display: block;
   max-width: 1200px;
   margin: 80px auto;
   display: flex;
@@ -188,11 +188,17 @@ body {
 }
 .home .home-text h2 {
   opacity: 0;
-  animation: slideFromTop 1s ease forwards;
+  animation: slideFromRight 1s ease forwards;
 }
-.home > div {
+
+.home .home-text .icon-list {
   opacity: 0;
-  animation: slideFromBottom 1s ease forwards;
+  animation: slideFromRight 1s ease forwards;
+}
+
+.home .home-text .cv {
+  opacity: 0;
+  animation: slideFromLeft 1s ease forwards;
 }
 
 .home .home-img {
@@ -211,6 +217,7 @@ body {
 }
 
 .home .home-img .design-home img {
+  position: relative;
   width: 100%;
   opacity: 0;
   animation: zoomIn 1s ease forwards;
@@ -781,7 +788,7 @@ footer {
   .sidebar {
     width: 70vw;
   }
-  .home{
+  .home {
     padding: 20px;
   }
   .home .home-text,
